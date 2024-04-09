@@ -32,4 +32,6 @@ COPY locustfile.py .
 # enable gevent support in debugger
 ENV GEVENT_SUPPORT=True
 
-ENTRYPOINT locust --host="http://${FRONTEND_ADDR}" --headless -u "${USERS:-10}" 2>&1
+ENTRYPOINT locust --host="a51c7559f4df64dae8215a563a2a4463-1886168390.ap-northeast-2.elb.amazonaws.com:8080" --headless -u "${USERS:-10}" 2>&1
+
+# http://${FRONTEND_ADDR}
